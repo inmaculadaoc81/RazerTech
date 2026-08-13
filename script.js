@@ -1,0 +1,5 @@
+const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');
+menu?.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(o))});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+const form=document.getElementById('contactForm'),status=document.getElementById('formStatus');
+form?.addEventListener('submit',async e=>{e.preventDefault();const b=form.querySelector('button[type=submit]'),old=b.innerHTML;b.disabled=true;b.textContent='Enviando…';status.textContent='';const payload=Object.fromEntries(new FormData(form).entries());try{const r=await fetch('/api/contacto',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}),d=await r.json();if(!r.ok)throw new Error(d.error);form.reset();status.textContent='✓ Consulta enviada correctamente.'}catch(err){status.textContent='No se pudo enviar. Puedes llamarnos o escribirnos por WhatsApp.'}finally{b.disabled=false;b.innerHTML=old}});
