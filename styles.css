@@ -5,3 +5,38 @@
 .seo-page{background:#f5f7f5}.seo-hero{padding:70px clamp(24px,7vw,110px);background:#070907;color:#fff;border-bottom:3px solid var(--green)}.seo-hero .crumb{font-size:12px;color:#7f8b7f}.seo-hero h1{font:700 clamp(36px,5vw,60px)/1.06 "Space Grotesk";letter-spacing:-.04em;margin:16px 0}.seo-hero p{max-width:800px;color:#aab5aa}.seo-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:42px;padding:68px clamp(24px,7vw,110px)}.seo-content{background:#fff;padding:44px;border:1px solid #dfe5df}.seo-content h2{font:700 30px/1.15 "Space Grotesk";margin:34px 0 10px}.seo-content h2:first-child{margin-top:0}.seo-content p{color:#536053}.seo-content a{color:#128f02;font-weight:800}.seo-aside{position:sticky;top:100px;align-self:start}.seo-contact{background:#070907;color:#fff;padding:26px;border-top:3px solid var(--green)}.seo-contact a{display:block;background:#fff;color:#070907;padding:12px 14px;margin-top:9px;font-weight:800}.seo-contact .wa{background:#25d366;color:#fff}.seo-related{background:#fff;border:1px solid #dfe5df;padding:21px;margin-top:17px}.seo-related a{display:block;padding:8px 0;border-bottom:1px solid #e3e8e3;color:#0d5505;font-size:13px}
 @media(max-width:980px){.nav{display:none;position:absolute;top:78px;left:16px;right:16px;background:#070907;padding:18px;flex-direction:column;align-items:stretch}.nav.open{display:flex}.menu-toggle{display:block;margin-left:auto}.top-wa span{display:none}.dropdown>button{padding:8px 0;text-align:left}.drop-menu{position:static;width:100%;max-height:280px;box-shadow:none}.hero{grid-template-columns:1fr}.blade-zone,.location,.contact-section,.seo-layout{grid-template-columns:1fr}.seo-aside{position:static}.steps{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.header{height:68px;padding:0 16px}.brand{width:170px}.top-wa{padding:8px}.hero{padding:45px 18px 60px;min-height:auto}.hero h1{font-size:42px}.hero-buttons{grid-template-columns:1fr}.cta.phone{grid-column:auto}.hero-stats{flex-direction:column}.section{padding:70px 18px}.service-cards{grid-template-columns:1fr}.blade-zone{gap:30px}.laptop-art{min-height:300px}.screen{height:180px}.screen span{font-size:25px}.steps{grid-template-columns:1fr}.proof{grid-template-columns:1fr}.map iframe{height:330px}.contact-section{gap:30px}.form{grid-template-columns:1fr;padding:22px 16px}.full{grid-column:1/-1}.footer{grid-template-columns:1fr}.legal{grid-column:auto}.seo-hero{padding:48px 18px}.seo-layout{padding:42px 18px}.seo-content{padding:25px 18px}.floating-wa{right:18px;bottom:95px;width:56px;height:56px}}
+
+/* Flechas limpias para Servicios y Modelos */
+.dropdown>button{display:inline-flex;align-items:center;gap:8px}
+.dropdown>button::after{
+  content:"";
+  width:7px;height:7px;
+  border-right:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);
+  transform-origin:center;
+  transition:transform .2s ease;
+}
+.dropdown:hover>button::after,
+.dropdown:focus-within>button::after{
+  transform:rotate(225deg) translate(-1px,-1px);
+}
+
+/* Chatbot visible en todas las páginas */
+.chat-window-wrapper{
+  position:fixed!important;
+  z-index:10001!important;
+  right:20px!important;
+  bottom:24px!important;
+}
+.chat-window-toggle{
+  width:64px!important;
+  height:64px!important;
+  border-radius:50%!important;
+  background:#39ff14!important;
+  color:#061006!important;
+  box-shadow:0 8px 28px rgba(57,255,20,.28)!important;
+}
+@media(max-width:650px){
+  .chat-window-wrapper{right:16px!important;bottom:18px!important}
+}
