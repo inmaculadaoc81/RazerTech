@@ -14,10 +14,10 @@
 
 <header class="header"><div class="wrap nav">
 <a href="#inicio"><img class="logo" src="/assets/logo-razertech.webp" alt="RazerTech Servicio Técnico Informático Razer"></a>
-<nav class="links">
+<nav class="links" id="mainMenu">
 <a href="#problemas">Qué le pasa</a><a href="#datos">Tus datos</a><a href="#recogida">Recogida</a><a href="#cita">Pedir cita</a><a href="#contacto">Contacto</a>
 <a class="navcall" href="tel:+34914468503">Atención Telefónica 24 horas 365 días</a>
-</nav><button class="menu-btn">Menú</button>
+</nav><button class="menu-btn" aria-expanded="false" aria-controls="mainMenu">Menú</button>
 </div></header>
 
 <main>
@@ -125,6 +125,16 @@ createChat({
 </script>
 
 <script>
+const menuBtn=document.querySelector('.menu-btn');
+const mainMenu=document.getElementById('mainMenu');
+menuBtn?.addEventListener('click',()=>{
+ const open=mainMenu.classList.toggle('open');
+ menuBtn.setAttribute('aria-expanded',String(open));
+});
+mainMenu?.addEventListener('click',(e)=>{
+ if(e.target.tagName==='A'){mainMenu.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}
+});
+
 const form=document.getElementById('contact-form');
 const statusEl=document.getElementById('form-status');
 form.addEventListener('submit',async(e)=>{

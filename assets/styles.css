@@ -23,7 +23,8 @@ a{text-decoration:none;color:inherit}
 .links{display:flex;align-items:center;gap:22px;font-weight:850;font-size:14px;color:#fff}
 .links a:hover{color:var(--green)}
 .navcall{padding:11px 16px;border-radius:999px;border:1px solid var(--green);color:var(--green)!important}
-.menu-btn{display:none}
+.menu-btn{display:none;background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;font:inherit;font-weight:800;font-size:13px;padding:9px 16px;border-radius:999px;cursor:pointer}
+.menu-btn:hover{border-color:var(--green);color:var(--green)}
 
 .hero{position:relative;overflow:hidden;padding:72px 0 76px;background:
  radial-gradient(circle at 83% 19%,rgba(22,255,22,.11),transparent 23%),
@@ -132,11 +133,14 @@ footer{background:#050605;color:#fff;padding:34px 0}
   --chat--toggle--active--background:#1d4ed8;
 }
 #n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:22px!important;bottom:96px!important;z-index:10060!important;background:#2563eb!important;box-shadow:0 8px 28px rgba(37,99,235,.35)!important}
-#n8n-chat .chat-window,#n8n-chat [class*="chat-window"]{position:fixed!important;right:22px!important;bottom:166px!important;z-index:10100!important;max-height:calc(100vh - 190px)!important}
+#n8n-chat .chat-window:not([class*="toggle"]),#n8n-chat [class*="chat-window"]:not([class*="toggle"]){position:fixed!important;right:22px!important;bottom:166px!important;z-index:10100!important;max-height:calc(100vh - 190px)!important}
 #n8n-chat .chat-input,#n8n-chat [class*="chat-input"],#n8n-chat .chat-footer,#n8n-chat [class*="chat-footer"]{position:sticky!important;bottom:0!important;z-index:10110!important;background:#fff!important}
 
 @media(max-width:900px){
   .links{display:none}.menu-btn{display:block}
+  .links.open{display:flex;position:absolute;top:80px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#050605;border-bottom:1px solid #1d241d;padding:6px 20px 18px;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+  .links.open a{padding:14px 0;border-bottom:1px solid #1d241d}
+  .links.open .navcall{margin:14px 0 4px;text-align:center}
   .hero-grid,.data-grid,.contact-grid,.pickup-panel{grid-template-columns:1fr}
   .problem-grid{grid-template-columns:1fr 1fr}
   .steps-grid{grid-template-columns:1fr 1fr}
