@@ -127,11 +127,11 @@ footer{background:#050605;color:#fff;padding:34px 0}
 #n8n-chat{
   --chat--color-primary:#0c0f0c;
   --chat--color-secondary:#16ff16;
-  --chat--toggle--background:#0c0f0c;
-  --chat--toggle--hover--background:#141914;
-  --chat--toggle--active--background:#141914;
+  --chat--toggle--background:#2563eb;
+  --chat--toggle--hover--background:#1d4ed8;
+  --chat--toggle--active--background:#1d4ed8;
 }
-#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:22px!important;bottom:96px!important;z-index:10060!important}
+#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:22px!important;bottom:96px!important;z-index:10060!important;background:#2563eb!important;box-shadow:0 8px 28px rgba(37,99,235,.35)!important}
 #n8n-chat .chat-window,#n8n-chat [class*="chat-window"]{position:fixed!important;right:22px!important;bottom:166px!important;z-index:10100!important;max-height:calc(100vh - 190px)!important}
 #n8n-chat .chat-input,#n8n-chat [class*="chat-input"],#n8n-chat .chat-footer,#n8n-chat [class*="chat-footer"]{position:sticky!important;bottom:0!important;z-index:10110!important;background:#fff!important}
 
