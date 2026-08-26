@@ -22,7 +22,7 @@ a{text-decoration:none;color:inherit}
 .logo{height:42px;max-width:320px;object-fit:contain}
 .links{display:flex;align-items:center;gap:22px;font-weight:850;font-size:14px;color:#fff}
 .links a:hover{color:var(--green)}
-.navcall{padding:11px 16px;border-radius:999px;border:1px solid var(--green);color:var(--green)!important}
+.navcall{padding:11px 16px;border-radius:999px;border:1px solid var(--green);color:var(--green)!important;white-space:nowrap}
 .menu-btn{display:none;background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;font:inherit;font-weight:800;font-size:13px;padding:9px 16px;border-radius:999px;cursor:pointer}
 .menu-btn:hover{border-color:var(--green);color:var(--green)}
 
@@ -39,7 +39,10 @@ a{text-decoration:none;color:inherit}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .82fr;gap:52px;align-items:start}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--green);font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 .eyebrow:before{content:"";width:32px;height:3px;background:var(--green)}
-h1{font-size:clamp(38px,4.45vw,58px);line-height:1.02;letter-spacing:-2.2px;margin:0 0 24px;max-width:790px}
+h1{font-size:clamp(46px,5.6vw,74px);line-height:1.03;letter-spacing:-2.4px;margin:0 0 24px;max-width:790px}
+.seo-content{background:var(--soft,#f5f5f3)}
+.seo-text{max-width:880px}
+.seo-text p{color:var(--muted,#5c646c);font-size:16px;line-height:1.7;margin:0 0 18px}
 .accent{color:var(--green)}
 .diagnosis{display:inline-flex;align-items:center;gap:12px;margin:6px 0 28px;padding:13px 17px;border:1px solid rgba(22,255,22,.35);background:rgba(22,255,22,.08);border-radius:14px}
 .diagnosis span{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--green);color:#000;font-weight:950}
@@ -132,7 +135,7 @@ footer{background:#050605;color:#fff;padding:34px 0}
   --chat--toggle--hover--background:#1d4ed8;
   --chat--toggle--active--background:#1d4ed8;
 }
-#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:22px!important;bottom:96px!important;z-index:10060!important;background:#2563eb!important;box-shadow:0 8px 28px rgba(37,99,235,.35)!important}
+#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:22px!important;bottom:96px!important;z-index:10060!important;background:#2563eb!important;box-shadow:0 8px 28px rgba(37,99,235,.35)!important;border:1px solid #fff!important}
 #n8n-chat .chat-window:not([class*="toggle"]),#n8n-chat [class*="chat-window"]:not([class*="toggle"]){position:fixed!important;right:22px!important;bottom:166px!important;z-index:10100!important;max-height:calc(100vh - 190px)!important}
 #n8n-chat .chat-input,#n8n-chat [class*="chat-input"],#n8n-chat .chat-footer,#n8n-chat [class*="chat-footer"]{position:sticky!important;bottom:0!important;z-index:10110!important;background:#fff!important}
 
@@ -149,7 +152,7 @@ footer{background:#050605;color:#fff;padding:34px 0}
 }
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
-  h1{font-size:40px}
+  h1{font-size:48px}
   .problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
   .phone,.full{grid-column:auto}
   .hero:after{display:none}
