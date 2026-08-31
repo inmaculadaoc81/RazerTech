@@ -18,6 +18,8 @@ a{text-decoration:none;color:inherit}
 .wrap{width:min(1180px,92%);margin:auto}
 
 .header{position:sticky;top:0;z-index:9000;background:rgba(5,6,5,.96);border-bottom:1px solid #1d241d;backdrop-filter:blur(14px)}
+.disclaimer-bar{background:#ffce31;color:#050605;text-align:center;font-size:12.5px;font-weight:800;padding:8px 16px}
+.privacy-link{color:#0758a8;text-decoration:underline}
 .nav{height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{height:42px;max-width:320px;object-fit:contain}
 .links{display:flex;align-items:center;gap:22px;font-weight:850;font-size:14px;color:#fff}
@@ -149,6 +151,7 @@ footer{background:#050605;color:#fff;padding:34px 0}
   .steps-grid{grid-template-columns:1fr 1fr}
   .trust-grid{grid-template-columns:1fr}
   .edge-copy{display:none}
+  .data-art:before{font-size:80px}
 }
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
@@ -156,6 +159,7 @@ footer{background:#050605;color:#fff;padding:34px 0}
   .problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
   .phone,.full{grid-column:auto}
   .hero:after{display:none}
+  .data-art:before{font-size:50px}
   .cal-frame{height:760px}
   .footer{flex-direction:column;align-items:flex-start}
 }

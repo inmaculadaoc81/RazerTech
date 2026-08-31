@@ -53,3 +53,24 @@ REVISIÓN (fixes aplicados en esta pasada):
   no responde. Aquí lo revisamos sin compromiso." Tamaño del H1
   aumentado: clamp(38-58px) → clamp(46-74px) en escritorio, 40px →
   48px en móvil.
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- H1 repetía la estructura "no responde. Aquí lo [verbo] [coletilla]"
+  usada en AcerGlobal. Reescrito con estructura de una sola frase,
+  imperativa: "Repara tu Razer sin perder tus archivos." (7 palabras).
+- BUG REAL — texto decorativo ".data-art:before" ("DATA", 120px) sin
+  reducción de tamaño en móvil/tablet, mismo patrón que otros repos
+  de la familia. Añadida reducción (80px tablet, 50px móvil).
+- BUG REAL — el formulario no tenía ninguna casilla de consentimiento
+  de política de privacidad. Añadida, con enlace a
+  https://kelatos.com/privacy-policy/ en azul y subrayado.
+- Añadida franja de aviso de servicio técnico independiente debajo
+  del menú (no existía).
+- Añadido "Sábados, domingos y días festivos estamos cerrados" debajo
+  del horario.
+- Botón "Atención Telefónica..." sin icono, a diferencia del de
+  WhatsApp. Añadido.
+- Verificado: schema.org ya usaba correctamente el único teléfono que
+  tiene este repo (no hay número propio distinto de información); no
+  se ha tocado. Formulario verificado: fetch a /api/contacto coincide
+  con api/contacto.js; conexión correcta.
