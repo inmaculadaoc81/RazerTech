@@ -50,7 +50,9 @@ h1{font-size:clamp(46px,5.6vw,74px);line-height:1.03;letter-spacing:-2.4px;margi
 .diagnosis span{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--green);color:#000;font-weight:950}
 .diagnosis strong{color:var(--green)}
 .ctas{display:grid;grid-template-columns:1.18fr .82fr;gap:12px;max-width:790px}
-.cta{min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 18px;border-radius:15px;font-weight:900}
+.cta{min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 18px;border-radius:999px;font-weight:900;transition:filter .15s ease,background .15s ease,color .15s ease}
+.whatsapp:hover,.pickup:hover{filter:brightness(.88)}
+.phone:hover{background:var(--green);color:#000}
 .cta svg{width:22px;height:22px;margin-right:8px}
 .whatsapp{background:var(--wa);color:#fff}
 .pickup{background:var(--green);color:#000}
