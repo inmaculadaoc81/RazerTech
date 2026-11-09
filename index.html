@@ -117,6 +117,7 @@ gtag('config','G-JFW2B4QZMG');
 <section id="contacto"><div class="wrap contact-grid">
 <div><div class="kicker">Cuéntanos qué ocurre</div><h2 class="title">¿Cuánto tiempo necesitas estar sin tu Razer?</h2><p class="lead">Explícanos qué hace, qué información necesitas conservar y para cuándo necesitas volver a usar el equipo.</p><p><strong>Teléfono:</strong> <a href="tel:+34914468503">+34 914 46 85 03</a></p></div>
 <div><form id="contact-form">
+<input type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" value="">
 <input name="nombre" placeholder="Nombre" required>
 <input name="telefono" placeholder="Teléfono" required>
 <input name="email" type="email" placeholder="Email" required>
@@ -160,10 +161,11 @@ mainMenu?.addEventListener('click',(e)=>{
 
 const form=document.getElementById('contact-form');
 const statusEl=document.getElementById('form-status');
+const formLoadedAt=Date.now();
 form.addEventListener('submit',async(e)=>{
  e.preventDefault();const btn=form.querySelector('button[type=submit]');btn.disabled=true;statusEl.textContent='Enviando...';
  try{
-   const r=await fetch('/api/contacto',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form).entries()))});
+   const r=await fetch('/api/contacto',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.assign(Object.fromEntries(new FormData(form).entries()),{ts:formLoadedAt}))});
    const d=await r.json().catch(()=>({}));if(!r.ok||!d.ok)throw new Error(d.code||'SEND_FAILED');
    statusEl.textContent='Consulta enviada correctamente.';statusEl.style.color='#18743a';form.reset();
  }catch(err){console.error(err);statusEl.textContent='No se pudo enviar. Puedes contactar por teléfono o WhatsApp.';statusEl.style.color='#b72f2f';}
